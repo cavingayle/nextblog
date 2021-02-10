@@ -63,7 +63,7 @@ userSchema.virtual('password')
 //methods > authenticate takes incoming method and hash pass, encrpty pass, makesalt
 userSchema.methods = {
     authenticate: function (plainText) {
-        return this.encryptPassword(plaintext) === this.hashed_oassword;
+        return this.encryptPassword(plainText) === this.hashed_password;
     },
     encryptPassword: function (password) {
         if (!password) return ""
